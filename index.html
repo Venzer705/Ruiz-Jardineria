@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Servicios de jardinería profesional. Especialistas en corte de césped con cortacésped, perfilado con desbrozadora y recogida de restos. Calcula tu presupuesto online.">
+    <title>Ruiz Jardinería | Cuidado y Mantenimiento de Jardines Profesional</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Syne:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+    <!-- Header / Navigation -->
+    <header class="main-header">
+        <div class="container header-container">
+            <a href="#" class="logo" id="header-logo">
+                <span class="logo-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+                    </svg>
+                </span>
+                <span class="logo-text">Ruiz <span class="accent">Jardinería</span></span>
+            </a>
+            
+            <nav class="main-nav" id="main-navigation">
+                <ul class="nav-links">
+                    <li><a href="#inicio" class="nav-link active">Inicio</a></li>
+                    <li><a href="#servicios" class="nav-link">Servicios</a></li>
+                    <li><a href="#calculadora" class="nav-link">Calculadora</a></li>
+                    <li><a href="#contacto" class="nav-link btn-nav">Contactar</a></li>
+                </ul>
+            </nav>
+
+            <button class="mobile-nav-toggle" id="mobile-menu-btn" aria-label="Abrir menú de navegación" aria-expanded="false">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="inicio" class="hero-section">
+            <div class="hero-background">
+                <div class="hero-overlay"></div>
+            </div>
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <span class="hero-subtitle fade-in">Servicio de Jardinería Premium</span>
+                    <h1 class="hero-title fade-in">El jardín de tus sueños, cuidado por profesionales</h1>
+                    <p class="hero-description fade-in">Nos encargamos del mantenimiento integral de tu césped utilizando maquinaria de alta gama. Rapidez, precisión y limpieza impecable en cada servicio.</p>
+                    <div class="hero-actions fade-in">
+                        <a href="#calculadora" class="btn btn-primary" id="hero-cta-calc">Calcular Presupuesto</a>
+                        <a href="#servicios" class="btn btn-secondary" id="hero-cta-services">Ver Servicios</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats/Intro Section -->
+        <section class="intro-section section-padding">
+            <div class="container intro-container">
+                <div class="intro-grid">
+                    <div class="intro-text-wrapper scroll-reveal">
+                        <span class="section-tag">Compromiso Ruiz</span>
+                        <h2 class="section-title">Resultados impecables sin que tengas que preocuparte de nada</h2>
+                        <p class="section-desc">Entendemos que tu jardín es una extensión de tu hogar. Por eso, combinamos técnicas profesionales de corte con herramientas de precisión para garantizar la salud y el aspecto estético de tu césped.</p>
+                    </div>
+                    <div class="intro-features scroll-reveal">
+                        <div class="feature-mini-card">
+                            <div class="feature-mini-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h3>Maquinaria Profesional</h3>
+                                <p>Cortes precisos que cuidan la salud de la hierba.</p>
+                            </div>
+                        </div>
+                        <div class="feature-mini-card">
+                            <div class="feature-mini-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h3>Limpieza Garantizada</h3>
+                                <p>Recogemos hasta la última hoja de césped cortado.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="servicios" class="services-section section-padding bg-light">
+            <div class="container">
+                <div class="section-header scroll-reveal">
+                    <span class="section-tag">Nuestros Servicios</span>
+                    <h2 class="section-title">Mantenimiento especializado para tu césped</h2>
+                    <p class="section-subtitle">Ofrecemos soluciones eficaces para mantener tus exteriores con un aspecto pulcro, verde y saludable.</p>
+                </div>
+
+                <div class="services-grid">
+                    <!-- Service 1: Lawnmower -->
+                    <article class="service-card scroll-reveal" id="service-mower">
+                        <div class="service-icon-wrapper">
+                            <!-- Lawnmower Icon (Custom SVG) -->
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="16" cy="48" r="8" />
+                                <circle cx="48" cy="48" r="8" />
+                                <path d="M16 40h32v8H16z" />
+                                <path d="M24 24h16l8 16H16z" />
+                                <path d="M32 24V10c0-2.2 1.8-4 4-4h8" />
+                                <path d="M8 48h8M48 48h8" />
+                                <path d="M20 40l6-16M44 40l-6-16" />
+                            </svg>
+                        </div>
+                        <div class="service-card-content">
+                            <h3>Corte de Césped</h3>
+                            <p class="service-badge">Cortacésped Profesional</p>
+                            <p class="service-card-desc">Corte homogéneo y adaptado a la altura ideal de tu tipo de césped. Ideal para mantener una alfombra verde saludable y densa en superficies planas o con pendiente moderada.</p>
+                            <ul class="service-bullets">
+                                <li>Regulación de altura precisa</li>
+                                <li>Cuchillas siempre afiladas para evitar daños</li>
+                                <li>Ideal para extensiones medianas y grandes</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <!-- Service 2: Desbrozado -->
+                    <article class="service-card scroll-reveal" id="service-brushclearing">
+                        <div class="service-icon-wrapper">
+                            <!-- Brush Clearing Icon (Custom SVG) -->
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 52L52 12" />
+                                <path d="M44 8l12 12" />
+                                <circle cx="12" cy="52" r="6" />
+                                <path d="M18 46l8-8" />
+                                <path d="M36 28l8-8" />
+                                <path d="M24 12l4 4-8 8" />
+                                <path d="M40 40l4 4-8 8" />
+                            </svg>
+                        </div>
+                        <div class="service-card-content">
+                            <h3>Desbrozado</h3>
+                            <p class="service-badge">Limpieza de Maleza</p>
+                            <p class="service-card-desc">Eliminación de hierba alta, maleza densa y vegetación descontrolada en terrenos rústicos, pendientes o parcelas descuidadas donde el cortacésped estándar no puede operar.</p>
+                            <ul class="service-bullets">
+                                <li>Limpieza a fondo de terrenos descuidados</li>
+                                <li>Herramientas de corte de alta potencia</li>
+                                <li>Precio por metro cuadrado: 0,18 € / m²</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <!-- Service 3: Perfilado de Bordes -->
+                    <article class="service-card service-card-full scroll-reveal" id="service-profiling">
+                        <div class="service-icon-wrapper">
+                            <!-- Profiling Icon (Custom SVG) -->
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M8 56l44-44M44 8l12 12" />
+                                <path d="M42 22l6-6M48 28l6-6" />
+                                <circle cx="12" cy="52" r="4" />
+                                <path d="M26 38l6-6" />
+                            </svg>
+                        </div>
+                        <div class="service-card-content">
+                            <h3>Perfilado de Bordes</h3>
+                            <p class="service-badge">Acabado Estético</p>
+                            <p class="service-card-desc">Define los límites entre el césped y otras superficies como aceras, caminos o parterres. Ideal para delimitar bordes nuevos o reestructurar caminos de tu jardín de forma limpia y profesional.</p>
+                            
+                            <div class="profiling-options-grid">
+                                <div class="profiling-opt-box">
+                                    <h4>Servicio Independiente o Combinado</h4>
+                                    <p>Puedes contratarlo de forma independiente para delimitar bordes nuevos o combinarlo con el corte de césped para dar el toque final perfecto.</p>
+                                </div>
+                                <div class="profiling-opt-box">
+                                    <h4>Tarifas Planas según Dificultad</h4>
+                                    <p>Ofrecemos tres niveles adaptados al estado y longitud de tus bordes (ver imágenes de referencia a continuación).</p>
+                                </div>
+                            </div>
+
+                            <div class="profiling-gallery-title">Niveles de Perfilado Independiente</div>
+                            <div class="profiling-levels-gallery">
+                                <div class="level-card">
+                                    <div class="level-img-wrapper">
+                                        <img src="assets/profiling_basic.jpg" alt="Perfilado Básico">
+                                    </div>
+                                    <div class="level-info">
+                                        <h5>Básico</h5>
+                                        <span class="level-price">15 €</span>
+                                        <p>Limpieza rápida de bordes rectos y sencillos.</p>
+                                    </div>
+                                </div>
+                                <div class="level-card">
+                                    <div class="level-img-wrapper">
+                                        <img src="assets/profiling_medium.jpg" alt="Perfilado Intermedio">
+                                    </div>
+                                    <div class="level-info">
+                                        <h5>Intermedio</h5>
+                                        <span class="level-price">30 €</span>
+                                        <p>Curvas y parterres definidos en jardines de diseño.</p>
+                                    </div>
+                                </div>
+                                <div class="level-card">
+                                    <div class="level-img-wrapper">
+                                        <img src="assets/profiling_intensive.jpg" alt="Perfilado Intensivo">
+                                    </div>
+                                    <div class="level-info">
+                                        <h5>Intensivo</h5>
+                                        <span class="level-price">A consultar</span>
+                                        <p>Reestructuración profunda de zanjas y bordes descuidados.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Service 4: Recogida y Limpieza -->
+                    <article class="service-card scroll-reveal" id="service-collection">
+                        <div class="service-icon-wrapper">
+                            <!-- Cleanup/Recogida Icon (Custom SVG) -->
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 16h40M16 16v32a4 4 0 004 4h24a4 4 0 004-4V16" />
+                                <path d="M26 8h12M32 16v36M24 28h16M24 38h16" />
+                                <path d="M8 24l4 4-4 4M56 24l-4 4 4 4" />
+                            </svg>
+                        </div>
+                        <div class="service-card-content">
+                            <h3>Recogida y Limpieza</h3>
+                            <p class="service-badge">Retirada Ecológica</p>
+                            <p class="service-card-desc">Nos aseguramos de que tu propiedad quede impecable. Recogemos y aspiramos todo el césped triturado y los restos esparcidos, transportándolos al punto limpio o zona de compostaje.</p>
+                            <ul class="service-bullets">
+                                <li>Barrido y soplado de aceras y accesos</li>
+                                <li>Prevención del acolchado excesivo (thatch)</li>
+                                <li>Precio por metro cuadrado: 0,04 € / m²</li>
+                            </ul>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Calculator Section -->
+        <section id="calculadora" class="calculator-section section-padding">
+            <div class="container">
+                <div class="calculator-grid">
+                    <div class="calculator-info scroll-reveal">
+                        <span class="section-tag">Transparencia</span>
+                        <h2 class="section-title text-white">Calcula el coste de tu servicio al instante</h2>
+                        <p class="section-desc text-light">Queremos facilitarte las cosas. Introduce los metros cuadrados aproximados de tu terreno y selecciona los servicios que necesitas para obtener una estimación inmediata.</p>
+                        
+                        <div class="calculator-pricing-info">
+                            <div class="price-info-item">
+                                <strong>Corte de Césped:</strong>
+                                <span>0,09 € / m²</span>
+                            </div>
+                            <div class="price-info-item">
+                                <strong>Desbrozado:</strong>
+                                <span>0,18 € / m²</span>
+                            </div>
+                            <div class="price-info-item">
+                                <strong>Perfilado de Bordes:</strong>
+                                <span>Desde 15 €</span>
+                            </div>
+                            <div class="price-info-item">
+                                <strong>Recogida de Restos:</strong>
+                                <span>0,04 € / m²</span>
+                            </div>
+                        </div>
+                        <p class="calculator-note">* Precios orientativos para condiciones estándar. Descuentos disponibles para mantenimientos recurrentes.</p>
+                    </div>
+
+                    <div class="calculator-card scroll-reveal" id="budget-calculator-card">
+                        <div class="calc-step">
+                            <label for="garden-size" class="calc-label">1. Tamaño del jardín ($m^2$):</label>
+                            <div class="slider-container">
+                                <input type="range" id="garden-size" name="garden-size" min="10" max="1000" value="150" class="range-slider">
+                                <div class="slider-values">
+                                    <span>10 m²</span>
+                                    <div class="size-output-badge">
+                                        <span id="size-output">150</span> m²
+                                    </div>
+                                    <span>1000 m²</span>
+                                </div>
+                            </div>
+                            <div class="number-input-fallback">
+                                <span class="fallback-text">O introduce el tamaño exacto:</span>
+                                <input type="number" id="garden-size-num" min="10" max="1000" value="150" class="num-input">
+                            </div>
+                            <span id="calc-error-msg" class="calc-error-text" style="display: none;">El tamaño máximo para estimación online es 1000 m²</span>
+                        </div>
+
+                        <div class="calc-step">
+                            <span class="calc-label">2. Servicios a incluir:</span>
+                            <div class="services-selector">
+                                <!-- Service Checkbox Card 1 -->
+                                <label class="service-select-card active" id="label-cb-mow">
+                                    <input type="checkbox" id="cb-mow" checked>
+                                    <span class="checkbox-custom"></span>
+                                    <span class="select-card-title">Corte con cortacésped (0,09 €/m²)</span>
+                                </label>
+                                <!-- Service Checkbox Card 2 -->
+                                <label class="service-select-card active" id="label-cb-brush">
+                                    <input type="checkbox" id="cb-brush" checked>
+                                    <span class="checkbox-custom"></span>
+                                    <span class="select-card-title">Desbrozado de terreno (0,18 €/m²)</span>
+                                </label>
+                                <!-- Service Checkbox Card 3 -->
+                                <label class="service-select-card active" id="label-cb-collect">
+                                    <input type="checkbox" id="cb-collect" checked>
+                                    <span class="checkbox-custom"></span>
+                                    <span class="select-card-title">Recogida y Limpieza (0,04 €/m²)</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="calc-step">
+                            <label for="calc-profiling-opt" class="calc-label">3. Perfilado de Bordes:</label>
+                            <select id="calc-profiling-opt" class="calc-select">
+                                <option value="none">No incluir perfilado</option>
+                                <option value="basic">Perfilado Básico (+15 €)</option>
+                                <option value="intermediate">Perfilado Intermedio (+30 €)</option>
+                                <option value="intensive">Perfilado Intensivo (A consultar)</option>
+                            </select>
+                        </div>
+
+                        <div class="calc-divider"></div>
+
+                        <div class="calc-result">
+                            <span class="result-label">Presupuesto Estimado</span>
+                            <div class="price-display">
+                                <span class="price-currency">~</span>
+                                <span class="price-amount" id="estimated-price">49</span>
+                                <span class="price-currency">€</span>
+                            </div>
+                            <p class="price-disclaimer">IVA no incluido. Estimación sujeta a confirmación visual.</p>
+                            <button id="btn-apply-budget" class="btn btn-primary btn-block">Reservar con este presupuesto</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contacto" class="contact-section section-padding bg-light">
+            <div class="container">
+                <div class="contact-grid">
+                    <div class="contact-details-wrapper scroll-reveal">
+                        <span class="section-tag">Contacto</span>
+                        <h2 class="section-title">¡Hablemos de tu jardín!</h2>
+                        <p class="section-desc">¿Tienes preguntas o prefieres que visitemos tu propiedad para darte un presupuesto cerrado? Escríbenos o llámanos directamente.</p>
+                        
+                        <div class="contact-info-list">
+                            <div class="contact-info-item">
+                                <div class="info-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 00.96.68h2.08a1 1 0 00.96-.68l.548-2.2A1 1 0 0115.3 3H18.7a2 2 0 012 2v2.28a1 1 0 01-.725.94l-2.2.548a1 1 0 00-.68.96v2.08c0 .412.25.76.68.96l2.2.548a1 1 0 01.725.94V18.7a2 2 0 01-2 2h-3.28a1 1 0 01-.94-.725l-.548-2.2a1 1 0 00-.96-.68h-2.08a1 1 0 00-.96.68l-.548 2.2A1 1 0 018.7 21H5.3a2 2 0 01-2-2v-2.28a1 1 0 01.725-.94l2.2-.548a1 1 0 00.68-.96v-2.08a1 1 0 00-.68-.96l-2.2-.548A1 1 0 013 11.3V5z" />
+                                    </svg>
+                                </div>
+                                <div class="info-content">
+                                    <span>Llámanos</span>
+                                    <a href="tel:+34626249903" id="contact-phone">626 249 903</a>
+                                </div>
+                            </div>
+                            <div class="contact-info-item">
+                                <div class="info-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                                    </svg>
+                                </div>
+                                <div class="info-content">
+                                    <span>Escríbenos</span>
+                                    <a href="mailto:info.ruizjardineria@gmail.com" id="contact-email">info.ruizjardineria@gmail.com</a>
+                                </div>
+                            </div>
+                            <div class="contact-info-item">
+                                <div class="info-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                                    </svg>
+                                </div>
+                                <div class="info-content">
+                                    <span>Zona de servicio</span>
+                                    <span class="info-text">Provincia y alrededores</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-form-wrapper scroll-reveal" id="form-container">
+                        <form id="contact-form" class="contact-form">
+                            <h3 class="form-title">Solicitar Presupuesto</h3>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="form-name">Nombre completo *</label>
+                                    <input type="text" id="form-name" required placeholder="Tu nombre">
+                                </div>
+                                <div class="form-group">
+                                    <label for="form-phone">Teléfono (opcional)</label>
+                                    <input type="tel" id="form-phone" placeholder="Ej. 600 000 000">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="form-email">Correo electrónico *</label>
+                                <input type="email" id="form-email" required placeholder="correo@ejemplo.com">
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="form-size">Tamaño estimado ($m^2$) *</label>
+                                    <input type="number" id="form-size" required placeholder="m²">
+                                </div>
+                                <div class="form-group">
+                                    <label for="form-services">Servicios de interés *</label>
+                                    <select id="form-services" required>
+                                        <option value="" disabled selected hidden>Selecciona una opción *</option>
+                                        <option value="todos">Todos los servicios (Corte, Desbrozado, Perfilado, Recogida)</option>
+                                        <option value="corte-desbroce-recogida">Corte, Desbrozado y Recogida</option>
+                                        <option value="corte-perfilado-recogida">Corte, Perfilado y Recogida</option>
+                                        <option value="corte-desbroce">Corte y Desbrozado</option>
+                                        <option value="corte-perfilado">Corte y Perfilado</option>
+                                        <option value="corte-recogida">Corte y Recogida</option>
+                                        <option value="desbroce-recogida">Desbrozado y Recogida</option>
+                                        <option value="perfilado-recogida">Perfilado y Recogida</option>
+                                        <option value="perfilado-indep">Perfilado Independiente</option>
+                                        <option value="solo-corte">Solo Corte de césped</option>
+                                        <option value="solo-desbroce">Solo Desbrozado</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="form-photos">Adjuntar fotos de tu jardín (opcional)</label>
+                                <div class="file-upload-wrapper">
+                                    <input type="file" id="form-photos" name="form-photos" accept="image/*" multiple class="file-input">
+                                    <div class="file-upload-label">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="20" height="20">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                        </svg>
+                                        <span>Seleccionar fotos de tu jardín...</span>
+                                    </div>
+                                    <div id="file-list-preview" class="file-preview-grid"></div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="form-message">Mensaje / Detalles adicionales</label>
+                                <textarea id="form-message" rows="4" placeholder="Cuéntanos más sobre el estado de tu jardín, si tiene obstáculos, árboles, pendientes..."></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-block" id="form-submit-btn">Enviar Solicitud</button>
+                        </form>
+                        
+                        <!-- Success message toast/container -->
+                        <div class="form-success-message" id="form-success" aria-hidden="true">
+                            <div class="success-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                                </svg>
+                            </div>
+                            <h3>¡Solicitud recibida!</h3>
+                            <p>Hemos recibido tus datos y presupuesto estimado. Nos pondremos en contacto contigo en menos de 24 horas laborables para confirmar la cita.</p>
+                            <button class="btn btn-secondary btn-sm" id="btn-reset-form">Enviar otro mensaje</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container footer-container">
+            <div class="footer-brand">
+                <a href="#" class="logo footer-logo">
+                    <span class="logo-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+                        </svg>
+                    </span>
+                    <span class="logo-text">Ruiz <span class="accent">Jardinería</span></span>
+                </a>
+                <p class="footer-tagline">Cuidado profesional y ecológico para tu césped y exteriores.</p>
+            </div>
+            
+            <div class="footer-links-group">
+                <h4>Navegación</h4>
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="#calculadora">Calculadora</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-hours">
+                <h4>Horario de Atención</h4>
+                <p>Lunes a Viernes: 10:30 - 14:00 y 15:30 - 22:00 (Sin Definir)</p>
+                <p>Sábados: 9:00 - 14:00 (Sin Definir)</p>
+                <p>Domingos: Cerrado (Sin Definir)</p>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="container footer-bottom-container">
+                <p>&copy; 2026 Ruiz Jardinería. Todos los derechos reservados.</p>
+                <div class="footer-legal">
+                    <a href="#">Política de Privacidad</a>
+                    <a href="#">Aviso Legal</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JS script -->
+    <script src="index.js"></script>
+</body>
+</html>
