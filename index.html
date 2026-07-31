@@ -276,7 +276,7 @@
                                 <span>0,04 € / m²</span>
                             </div>
                         </div>
-                        <p class="calculator-note">* Precios orientativos para condiciones estándar. Descuentos disponibles para mantenimientos recurrentes.</p>
+                        <p class="calculator-note">* Todos los precios tienen el <strong>IVA incluido</strong>. Incluyen la tarifa base de desplazamiento de 12 € por servicio y aplicamos automáticamente un <strong>10% de descuento por volumen</strong> en terrenos de más de 500 m².</p>
                     </div>
 
                     <div class="calculator-card scroll-reveal" id="budget-calculator-card">
@@ -336,13 +336,19 @@
                         <div class="calc-divider"></div>
 
                         <div class="calc-result">
+                            <div id="volume-discount-badge" class="volume-discount-badge" style="display: none;">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                </svg>
+                                <span>¡10% de Descuento por Volumen Aplicado! (>500 m²)</span>
+                            </div>
                             <span class="result-label">Presupuesto Estimado</span>
                             <div class="price-display">
                                 <span class="price-currency">~</span>
                                 <span class="price-amount" id="estimated-price">49</span>
                                 <span class="price-currency">€</span>
                             </div>
-                            <p class="price-disclaimer">IVA no incluido. Estimación sujeta a confirmación visual.</p>
+                            <p class="price-disclaimer">IVA incluido. Incluye tarifa base de desplazamiento (12 €). Estimación sujeta a confirmación visual.</p>
                             <button id="btn-apply-budget" class="btn btn-primary btn-block">Reservar con este presupuesto</button>
                         </div>
                     </div>

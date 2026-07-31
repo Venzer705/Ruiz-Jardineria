@@ -153,15 +153,22 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         
         let totalPrice = 0;
+        const volumeDiscountBadge = document.getElementById('volume-discount-badge');
+        const eligibleForDiscount = cbMow.checked || cbBrush.checked;
+        
         if (servicesCount > 0) {
             totalPrice = BASE_COST + (size * areaPrice) + flatPrice;
             
             // Premium discount: 10% off for large gardens (> 500m2)
             // Only applies if either Corte (mow) or Desbrozado (brush) is contracted
-            const eligibleForDiscount = cbMow.checked || cbBrush.checked;
             if (size > 500 && eligibleForDiscount) {
                 totalPrice *= 0.9;
+                if (volumeDiscountBadge) volumeDiscountBadge.style.display = 'inline-flex';
+            } else {
+                if (volumeDiscountBadge) volumeDiscountBadge.style.display = 'none';
             }
+        } else {
+            if (volumeDiscountBadge) volumeDiscountBadge.style.display = 'none';
         }
         
         const finalPrice = Math.round(totalPrice);
@@ -305,9 +312,10 @@ document.addEventListener('DOMContentLoaded', () => {
             formServices.value = 'todos';
         }
         
-        const priceText = profilingVal === 'intensive' ? "a consultar (intensivo)" : `${price} €`;
+        const priceText = profilingVal === 'intensive' ? "a consultar (intensivo)" : `${price} € (IVA incluido)`;
+        const discountText = (size > 500 && (hasMow || hasBrush)) ? "\n(Incluye tarifa base de desplazamiento de 12 € y 10% de descuento por volumen por >500 m²)" : "\n(Incluye tarifa base de desplazamiento de 12 €)";
         
-        formMessage.value = `Hola, he calculado un presupuesto estimado de aproximadamente ${priceText} para mi jardín de ${size} m².\nServicios seleccionados:\n- ${servicesText.join('\n- ')}\n\nMe gustaría concertar una cita para confirmar el presupuesto y los detalles del terreno.`;
+        formMessage.value = `Hola, he calculado un presupuesto estimado de aproximadamente ${priceText} para mi jardín de ${size} m².${discountText}\n\nServicios seleccionados:\n- ${servicesText.join('\n- ')}\n\nMe gustaría concertar una cita para confirmar el presupuesto y los detalles del terreno.`;
         
         // Scroll to form
         const contactSection = document.getElementById('contacto');
