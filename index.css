@@ -1309,16 +1309,11 @@ p {
     }
 }
 
-/* Scroll Reveal Classes */
+/* Scroll Reveal Classes - Default to visible for robust rendering */
 .scroll-reveal {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.8s ease, transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
-}
-
-.scroll-reveal.revealed {
     opacity: 1;
     transform: translateY(0);
+    transition: opacity 0.8s ease, transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
 /* ==========================================================================

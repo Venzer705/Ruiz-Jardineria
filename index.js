@@ -320,29 +320,9 @@ document.addEventListener('DOMContentLoaded', () => {
     // 5. SCROLL REVEAL ANIMATIONS (INTERSECTION OBSERVER)
     // ==========================================================================
     const revealElements = document.querySelectorAll('.scroll-reveal');
-    
-    if ('IntersectionObserver' in window) {
-        const revealObserver = new IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('revealed');
-                    observer.unobserve(entry.target); // Run animation once
-                }
-            });
-        }, {
-            threshold: 0.15,
-            rootMargin: '0px 0px -50px 0px'
-        });
-        
-        revealElements.forEach(element => {
-            revealObserver.observe(element);
-        });
-    } else {
-        // Fallback for older browsers
-        revealElements.forEach(element => {
-            element.classList.add('revealed');
-        });
-    }
+    revealElements.forEach(element => {
+        element.classList.add('revealed');
+    });
 
     // ==========================================================================
     // 6. CONTACT FORM SUBMISSION
