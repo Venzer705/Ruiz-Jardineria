@@ -1548,3 +1548,17 @@ p {
     height: 1rem;
     flex-shrink: 0;
 }
+
+/* Always Included Feature Badge in Calculator */
+.included-feature-card {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.85rem 1.25rem;
+    background-color: rgba(34, 197, 94, 0.08);
+    border: 1px dashed rgba(34, 197, 94, 0.3);
+    border-radius: var(--radius-md);
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 0.88rem;
+    margin-top: 0.25rem;
+}
