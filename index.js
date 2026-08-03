@@ -154,7 +154,7 @@ document.addEventListener('DOMContentLoaded', () => {
         
         let totalPrice = 0;
         const volumeDiscountBadge = document.getElementById('volume-discount-badge');
-        const eligibleForDiscount = cbMow.checked || cbBrush.checked;
+        const eligibleForDiscount = (cbMow && cbMow.checked) || (cbBrush && cbBrush.checked);
         
         if (servicesCount > 0) {
             totalPrice = BASE_COST + (size * areaPrice) + flatPrice;
@@ -238,13 +238,13 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     // Calculator Event Listeners
-    gardenSizeSlider.addEventListener('input', updateSizeFromSlider);
-    gardenSizeNum.addEventListener('change', updateSizeFromNum);
+    if (gardenSizeSlider) gardenSizeSlider.addEventListener('input', updateSizeFromSlider);
+    if (gardenSizeNum) gardenSizeNum.addEventListener('change', updateSizeFromNum);
     
-    cbMow.addEventListener('change', () => toggleServiceCheckbox(cbMow, labelMow));
-    cbBrush.addEventListener('change', () => toggleServiceCheckbox(cbBrush, labelBrush));
-    cbCollect.addEventListener('change', () => toggleServiceCheckbox(cbCollect, labelCollect));
-    calcProfilingOpt.addEventListener('change', calculateBudget);
+    if (cbMow) cbMow.addEventListener('change', () => toggleServiceCheckbox(cbMow, labelMow));
+    if (cbBrush) cbBrush.addEventListener('change', () => toggleServiceCheckbox(cbBrush, labelBrush));
+    if (cbCollect) cbCollect.addEventListener('change', () => toggleServiceCheckbox(cbCollect, labelCollect));
+    if (calcProfilingOpt) calcProfilingOpt.addEventListener('change', calculateBudget);
 
     // Initialize budget calculation
     calculateBudget();
@@ -266,8 +266,8 @@ document.addEventListener('DOMContentLoaded', () => {
         
         // Determine selected services text list
         let servicesText = [];
-        if (cbMow.checked) servicesText.push("Corte de césped con cortacésped");
-        if (cbBrush.checked) servicesText.push("Desbrozado de terreno");
+        if (cbMow && cbMow.checked) servicesText.push("Corte de césped con cortacésped");
+        if (cbBrush && cbBrush.checked) servicesText.push("Desbrozado de terreno");
         
         const profilingVal = calcProfilingOpt.value;
         if (profilingVal === 'basic') {
