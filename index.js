@@ -134,9 +134,9 @@ document.addEventListener('DOMContentLoaded', () => {
             areaPrice += RATES.brush;
             servicesCount++;
         }
-        // Collection and cleanup is automatically included for area jobs
-        if ((cbMow && cbMow.checked) || (cbBrush && cbBrush.checked)) {
+        if (cbCollect && cbCollect.checked) {
             areaPrice += RATES.collect;
+            servicesCount++;
         }
         
         const profilingVal = calcProfilingOpt.value;
@@ -278,31 +278,42 @@ document.addEventListener('DOMContentLoaded', () => {
             servicesText.push("Perfilado intensivo (Personalizado)");
         }
         
-        servicesText.push("Recogida y limpieza de restos (Incluida sin coste adicional)");
+        if (cbCollect && cbCollect.checked) servicesText.push("Recogida y limpieza de restos");
         
         // Determine formServices value based on selected combo:
         const hasMow = cbMow && cbMow.checked;
         const hasBrush = cbBrush && cbBrush.checked;
+        const hasCollect = cbCollect && cbCollect.checked;
         const hasProfile = profilingVal !== 'none';
         
-        if (hasMow && hasBrush && hasProfile) {
+        if (hasMow && hasBrush && hasProfile && hasCollect) {
             formServices.value = 'todos';
-        } else if (hasMow && hasBrush) {
+        } else if (hasMow && hasBrush && hasCollect) {
             formServices.value = 'corte-desbroce-recogida';
-        } else if (hasMow && hasProfile) {
+        } else if (hasMow && hasProfile && hasCollect) {
             formServices.value = 'corte-perfilado-recogida';
-        } else if (hasMow) {
+        } else if (hasMow && hasBrush) {
+            formServices.value = 'corte-desbroce';
+        } else if (hasMow && hasProfile) {
+            formServices.value = 'corte-perfilado';
+        } else if (hasMow && hasCollect) {
             formServices.value = 'corte-recogida';
-        } else if (hasBrush) {
+        } else if (hasBrush && hasCollect) {
             formServices.value = 'desbroce-recogida';
-        } else if (hasProfile) {
+        } else if (hasProfile && hasCollect) {
             formServices.value = 'perfilado-recogida';
+        } else if (hasProfile) {
+            formServices.value = 'perfilado-indep';
+        } else if (hasMow) {
+            formServices.value = 'solo-corte';
+        } else if (hasBrush) {
+            formServices.value = 'solo-desbroce';
         } else {
             formServices.value = 'todos';
         }
         
         const priceText = profilingVal === 'intensive' ? "a consultar (intensivo)" : `${price} € (IVA incluido)`;
-        const discountText = (size > 500 && (hasMow || hasBrush)) ? "\n(Incluye recogida y limpieza de restos, tarifa base de desplazamiento de 12 € y 10% de descuento por volumen por >500 m²)" : "\n(Incluye recogida y limpieza de restos y tarifa base de desplazamiento de 12 €)";
+        const discountText = (size > 500 && (hasMow || hasBrush)) ? "\n(Incluye tarifa base de desplazamiento de 12 € y 10% de descuento por volumen por >500 m²)" : "\n(Incluye tarifa base de desplazamiento de 12 €)";
         
         formMessage.value = `Hola, he calculado un presupuesto estimado de aproximadamente ${priceText} para mi jardín de ${size} m².${discountText}\n\nServicios seleccionados:\n- ${servicesText.join('\n- ')}\n\nMe gustaría concertar una cita para confirmar el presupuesto y los detalles del terreno.`;
         
@@ -320,9 +331,29 @@ document.addEventListener('DOMContentLoaded', () => {
     // 5. SCROLL REVEAL ANIMATIONS (INTERSECTION OBSERVER)
     // ==========================================================================
     const revealElements = document.querySelectorAll('.scroll-reveal');
-    revealElements.forEach(element => {
-        element.classList.add('revealed');
-    });
+    
+    if ('IntersectionObserver' in window) {
+        const revealObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('revealed');
+                    observer.unobserve(entry.target); // Run animation once
+                }
+            });
+        }, {
+            threshold: 0.15,
+            rootMargin: '0px 0px -50px 0px'
+        });
+        
+        revealElements.forEach(element => {
+            revealObserver.observe(element);
+        });
+    } else {
+        // Fallback for older browsers
+        revealElements.forEach(element => {
+            element.classList.add('revealed');
+        });
+    }
 
     // ==========================================================================
     // 6. CONTACT FORM SUBMISSION
