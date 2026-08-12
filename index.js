@@ -328,7 +328,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // ==========================================================================
-    // 5. SCROLL REVEAL ANIMATIONS (INTERSECTION OBSERVER)
+    // 5. SCROLL REVEAL ANIMATIONS (INTERSECTION OBSERVER WITH FAILSAFE)
     // ==========================================================================
     const revealElements = document.querySelectorAll('.scroll-reveal');
     
@@ -341,12 +341,17 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             });
         }, {
-            threshold: 0.15,
-            rootMargin: '0px 0px -50px 0px'
+            threshold: 0.08,
+            rootMargin: '0px 0px -40px 0px'
         });
         
         revealElements.forEach(element => {
-            revealObserver.observe(element);
+            const rect = element.getBoundingClientRect();
+            if (rect.top < window.innerHeight && rect.bottom >= 0) {
+                element.classList.add('revealed');
+            } else {
+                revealObserver.observe(element);
+            }
         });
     } else {
         // Fallback for older browsers
@@ -354,6 +359,13 @@ document.addEventListener('DOMContentLoaded', () => {
             element.classList.add('revealed');
         });
     }
+
+    // Failsafe timer: Ensure all sections are revealed after 1.2 seconds if not yet triggered
+    setTimeout(() => {
+        revealElements.forEach(element => {
+            element.classList.add('revealed');
+        });
+    }, 1200);
 
     // ==========================================================================
     // 6. CONTACT FORM SUBMISSION

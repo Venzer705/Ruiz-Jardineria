@@ -872,11 +872,13 @@ p {
 }
 
 .checkbox-custom {
-    width: 1.25rem;
-    height: 1.25rem;
-    border: 2px solid rgba(255, 255, 255, 0.3);
-    border-radius: 4px;
-    display: inline-block;
+    width: 1.4rem;
+    height: 1.4rem;
+    border: 2px solid rgba(255, 255, 255, 0.35);
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: relative;
     transition: var(--transition-fast);
     flex-shrink: 0;
@@ -889,19 +891,18 @@ p {
 
 .checkbox-custom::after {
     content: '';
-    position: absolute;
-    display: none;
-    left: 5px;
-    top: 2px;
-    width: 4px;
-    height: 8px;
+    display: block;
+    width: 6px;
+    height: 11px;
     border: solid var(--color-white);
-    border-width: 0 2px 2px 0;
-    transform: rotate(45deg);
+    border-width: 0 2.5px 2.5px 0;
+    transform: rotate(45deg) scale(0);
+    transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    margin-bottom: 2px;
 }
 
 .service-select-card.active .checkbox-custom::after {
-    display: block;
+    transform: rotate(45deg) scale(1);
 }
 
 .select-card-title {
@@ -1309,11 +1310,12 @@ p {
     }
 }
 
-/* Scroll Reveal Classes */
+/* Scroll Reveal Classes (Smooth Fade & Slide Entrance) */
 .scroll-reveal {
     opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.8s ease, transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+    transform: translateY(35px);
+    transition: opacity 0.8s cubic-bezier(0.25, 1, 0.5, 1), transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+    will-change: opacity, transform;
 }
 
 .scroll-reveal.revealed {
